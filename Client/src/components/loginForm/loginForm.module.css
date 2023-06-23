@@ -1,0 +1,207 @@
+.background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 110%;
+  height: 110%;
+  margin-top: -5%;
+  position: absolute;
+  z-index: -1;
+  background-image: url('../../assets/RZxQ.gif');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.contenedor {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  overflow: hidden;
+  max-width: 50vw;
+  max-height: 50vh;
+  padding: 10rem;
+}
+
+
+.login {
+  display: flex;
+  width: 100%;
+  min-width: 200px;
+  margin-left: -20px;
+  max-width: 600px;
+  height: 60%;
+  min-height: 200px;
+  max-height: 500px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(68, 214, 44, 0.7);
+  padding: 30px;
+  box-shadow: 5px 10px 10px 5px;
+  border-radius: 25px 25px;
+}
+
+@media screen and (max-width: 1200px) {
+  .login {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .l.background {
+    max-width: 300%;
+  }
+}
+
+.credentialsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  font-size: 15px;
+}
+
+.credentials input {
+  width: 100%;
+  padding: 0px;
+  margin: 8px;
+  color: rgb(105, 14, 14);
+  font-family: Roboto, sans-serif;
+  letter-spacing: 0.1rem;
+  border-radius: 5px;
+  box-shadow: 10px 5px 10px;
+}
+
+.submitBtn {
+  margin: 15px auto;
+  border-radius: 10px;
+  letter-spacing: 0.25rem;
+  padding: 15px;
+  transition: 0.4s ease-in-out;
+  box-shadow: 0 1 25px var(--color);
+  animation: glowingBorder 20s ease-in-out infinite;
+}
+
+.submitBtn:hover, .submitBtn:focus {
+  outline-offset: 5px;
+  background-color: rgba(9, 42, 189, 0.836);
+  box-shadow: 10px 0px 10px 0px;
+}
+
+h2 {
+  font-family: "Get Schwifty", cursive;
+  font-size: 48px;
+  color: green;
+  margin: 20px 0;
+}
+
+.rmlogo {
+  font-family: 'Get Schwifty', sans-serif;
+  font-size: 48px;
+  color: #00e5ff;
+  text-shadow: 2px 2px 4px #62d1f3;
+  animation: swing 2s infinite alternate;
+}
+
+@keyframes swing {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(-10deg);
+  }
+  40% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(-10deg);
+  }
+  80% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+
+
+ /* .logo {
+  position: relative;
+  left: 50%;
+  top: 10%;
+  transform: translate(-40%, -40%);
+  background-image: url('../Form/images/Logo.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 180px;
+  height: 50px;
+  z-index: 1;
+} */
+    
+
+  /* .formTitle {
+    margin-bottom: 10px;
+  }
+    
+  .credentials {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+  }
+    
+  .credentials input {
+    background: none;
+    border: none;
+    border-bottom: solid #39ff14 1px;
+    color: #39ff14;
+    margin: 10px 0;
+  }
+    .credentials input:focus {
+      outline: none;
+    }
+    
+    .credentials span {
+      color: red;
+    }
+   */
+  
+     /* .formContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      border: solid #39ff14 1px;
+      padding: 30px;
+      color: #39ff14;
+      }
+    
+    .formTitle {
+      margin-bottom: 10px;
+    } */
+    
+    /* .submitBtn {
+      position: relative;
+      left: 0px;
+      border-radius: 5px;
+      border: solid #39ff14 1px;
+      background: rgb(44, 46, 49);
+      color: #39ff14;
+      font-size: 15px;
+      max-width: 200px;
+      min-width: 200px;
+      max-height: 50px;
+      min-height: 50px;
+      margin-top: 23px;
+    }
+      
+    .submitBtn:hover {
+      box-shadow: inset 0 0 10px #39ff14;
+      font-size: 20px;
+    } */
+      
+    

@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css?family=Get+Schwifty&display=swap");
+
+.searchContainer {
+  width: 30%;
+  padding: 12px 20px;
+  border-radius: 7px 5px 0px 7px;
+  box-sizing: border-box;
+
+}
+
+.searchbar:focus {
+  background-color: #fff;
+  border-color: #007bff;
+  outline: none;
+}
+
+.searchIconContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 0px 7px 7px 0px;
+
+}
+
+.searchIcon {
+  width: 20px;
+  height: 20px;
+  flex-wrap: 50%;
+  position: center;
+  background-image: url("../../assets/lupa.svg");
+  background-size: cover;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1180px) {
+  .searchBar {
+     width: 100px;
+     font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .searchBar {
+     width: 20px;
+  }
+}
+

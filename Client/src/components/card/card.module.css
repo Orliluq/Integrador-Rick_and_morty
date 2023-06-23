@@ -1,0 +1,127 @@
+.charactersContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.characterCard {
+  background-color: #bce6f3;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(12, 202, 216, 0.726);
+  margin: 1rem;
+  padding: 1rem;
+  width: 200px;
+  transition: 0.3s;
+}
+
+.characterCard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 16px rgba(11, 216, 206, 0.863);
+}
+
+.characterImagen {
+  border-radius: 50%;
+  height: 100px;
+  object-fit: cover;
+  width: 100px;
+}
+
+.characterCard h2 {
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
+}
+
+.characterCard p {
+  font-size: 1rem;
+  margin: 0.25rem 0;
+}
+
+@keyframes circle {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(20deg) rotateY(20deg);
+  }
+}
+
+.characterCard {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.characterCard:hover {
+  animation: circle 4s linear infinite;
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 4px 16px rgba(11, 202, 216, 0.795);
+}
+
+
+.closeButton {
+  opacity: 0.7;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+  
+.closeButton:hover {
+  background-color: red;
+  color: white;
+}
+
+.name {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+} 
+  
+.characterImage {
+  display: block;
+  width: 100%;
+  height: auto;
+  -webkit-transition: all 0.3s ease-in-out; /* Animation to fade in */
+  -ms-transition: all 0.3s ease-in-out; /* Animation to fade in */
+transition: all 0.3s ease-in-out; /* Animation to fade in */
+} 
+
+.imageContainer:hover .characterImage {
+  opacity: 0.4;
+}
+  
+.imageContainer:hover .name {
+  opacity: 1; 
+}
+
+
+/* Extra small devices (portrait phones, 320px and up) */
+@media (min-width: 320px) {
+  .charactersContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (min-width: 480px) {
+  .charactersContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .charactersContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .charactersContainer {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Large devices (desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .charactersContainer {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
