@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { removeFavorite } from "./redux/actions";
+import { removeFavorite } from './redux/actions';
 import Detail from "./views/detail/detail";
 import About from "./views/about/about";
 import Cards from "./components/cards/Cards";
@@ -12,7 +12,7 @@ import LandingPage from "./views/landingPage/landingPage";
 import Favorites from "./views/favorites/favorites";
 import "./App.css";
 import LoginForm from "./components/loginForm/loginForm";
-
+import RegisterUser from "./components/register/registerUser";
 
 function App() {
   const [characters, setCharacters] = useState([]);
@@ -68,12 +68,12 @@ function App() {
   }
 
   function closeHandler(id) {
-    let deleted = characters.filter((character) => character.id !== Number(id));
-
+    const updatedCharacters = characters.filter((character) => character.id !== id);
+  
+    setCharacters(updatedCharacters);
     dispatch(removeFavorite(id));
-
-    setCharacters(deleted);
-  }
+  }  
+  
 
   function randomHandler() {
     let haveIt = [];
@@ -119,6 +119,7 @@ function App() {
         <Route path="/detail/:id" element={<Detail />} />
         <Route path="/about" element={<About />} />
         <Route path="/favorites" element={<Favorites />} />
+        <Route path="/register" element={<RegisterUser />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </div>

@@ -5,62 +5,74 @@ export const REMOVE_FAV = "REMOVE_FAV";
 export const ORDER = "ORDER";
 export const FILTER = "FILTER";
 export const RESET = "RESET";
+export const REGISTER_USER = "REGISTER_USER";
+export const LOGIN_USER = "LOGIN_USER";
 
 export const addFavorite = (character) => {
-  const endpoint = "http://localhost:3001/rickandmorty/fav";
-    return async (dispatch) => {
-      try {
-        const { data } = await axios.post(endpoint, character);
-      
-        if(!data.length) throw Error('No hay favoritos');
-
-        return dispatch({
-          type: ADD_FAV,
-          payload: data,
+  const endpoint = 'http://localhost:3001/rickandmorty/fav';
+  return async (dispatch) => {
+    try {
+      const { data } = await axios.post(endpoint, character);
+      dispatch({
+        type: ADD_FAV,
+        payload: data,
       });
-    
     } catch (error) {
-        console.log(error.message);
-  }
-}};
+      console.log(error.message);
+    }
+  };
+};
 
 export const removeFavorite = (id) => {
-  const endpoint = "http://localhost:3001/rickandmorty/fav/" + id;
-    return async (dispatch) => {
-      try {
-        const { data } = await axios.delete(endpoint);
+  const endpoint = `http://localhost:3001/rickandmorty/fav/${id}`;
+  return async (dispatch) => {
+    try {
+      await axios.delete(endpoint);
+      dispatch({
+        type: REMOVE_FAV,
+        payload: id,
+      });
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+};
 
-        if(!data.length) throw Error('No hay favoritos');
 
-        return dispatch({
-          type: REMOVE_FAV,
-          payload: data,
-        });
-
-      } catch (error) {
-        console.log(error.message);
-  }
-}};
-
-export function orderFavorites(order) {
+export const orderFav = (order) => {
   return {
     type: ORDER,
     payload: order,
   };
-}
+};
 
-export function filterFavorites(gender) {
+export const filterFav = (gender) => {
   return {
     type: FILTER,
     payload: gender,
   };
-}
+};
 
-export function resetFavorites() {
+export const resetFav = () => {
   return {
     type: RESET,
   };
-}
+};
+
+export const registerUser = (user) => {
+  return {
+    type: REGISTER_USER,
+    payload: user,
+  };
+};
+
+export const loginUser = (user) => {
+  return {
+    type: LOGIN_USER,
+    payload: user,
+  };
+};
+
 
 
 // export const addFavorite = (character) => {

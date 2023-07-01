@@ -17,6 +17,7 @@ const About = () => {
             <h1>HOLA 🖐</h1>
             <h2>Soy Orlibet Dun</h2>
             <p>Este es mi proyecto integrador de Rick and Morty</p>
+            <p>Hecho con disciplina, constancia y amor</p>
             <img
               src={logo}
               alt=""
