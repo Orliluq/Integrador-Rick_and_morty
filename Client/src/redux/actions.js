@@ -9,66 +9,67 @@ export const REGISTER_USER = "REGISTER_USER";
 export const LOGIN_USER = "LOGIN_USER";
 
 export const addFavorite = (character) => {
-  const endpoint = 'http://localhost:3001/rickandmorty/fav';
+  const endpoint = `http://localhost:3001/rickandmorty/fav`;
+
   return async (dispatch) => {
-    try {
-      const { data } = await axios.post(endpoint, character);
-      dispatch({
-        type: ADD_FAV,
-        payload: data,
-      });
-    } catch (error) {
-      console.log(error.message);
-    }
-  };
-};
+     try { 
+        const { data } = await axios.post(endpoint, character);
+        return dispatch({
+           type: 'ADD_FAV',
+           payload: data,
+        });
+     } catch (error) {
+        console.error(error);
+     }
+  }
+}
 
 export const removeFavorite = (id) => {
-  const endpoint = `http://localhost:3001/rickandmorty/fav/${id}`;
-  return async (dispatch) => {
-    try {
-      await axios.delete(endpoint);
-      dispatch({
-        type: REMOVE_FAV,
-        payload: id,
-      });
-    } catch (error) {
-      console.log(error.message);
+    const endpoint = `http://localhost:3001/rickandmorty/fav/${id}`;
+ 
+    return async (dispatch) => {
+       try {
+          const { data } = await axios.delete(endpoint);
+          return dispatch({
+                      type: 'REMOVE_FAV',
+                      payload: data,
+                   });
+       } catch (error) {
+          console.error(error);
+       }
     }
-  };
-};
-
+ };
 
 export const orderFav = (order) => {
   return {
-    type: ORDER,
+    type: 'ORDER',
     payload: order,
   };
 };
 
 export const filterFav = (gender) => {
   return {
-    type: FILTER,
+    type: 'FILTER',
     payload: gender,
   };
 };
 
 export const resetFav = () => {
   return {
-    type: RESET,
+    type: 'RESET',
   };
 };
 
 export const registerUser = (user) => {
   return {
-    type: REGISTER_USER,
+    type: 'REGISTER_USER',
     payload: user,
   };
 };
 
 export const loginUser = (user) => {
   return {
-    type: LOGIN_USER,
+    type: 'LOGIN_USER',
     payload: user,
   };
 };
