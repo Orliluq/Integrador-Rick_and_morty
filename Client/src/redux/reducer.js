@@ -14,25 +14,26 @@ export default function rootReducer(state = initialState, action) {
       return {
         ...state,
         myFavorites: action.payload,
+        allCharacters: action.payload,
       };
     case ORDER:
-      let ordenados;
-      if (action.payload === "Ascendente") {
-        ordenados = state.myFavorites.sort((a, b) => (a.id > b.id ? 1 : -1));
-      } else {
-        ordenados = state.myFavorites.sort((a, b) => (b.id > a.id ? 1 : -1));
+      const allCharactersCopy = [...state.allCharacters]
+      return {
+          ...state,
+          myFavorites:
+          action.payload === "A"
+          ? allCharactersCopy.sort((a, b)=> a.id - b.id)
+          : allCharactersCopy.sort((a, b)=> b.id - a.id)
       }
-      return {
-        ...state,
-        myFavorites: [...ordenados],
-      };
     case FILTER:
-      return {
-        ...state,
-        myFavorites: state.allCharacters.filter(
-          (character) => character.gender === action.payload
-        ),
-      };
+      const allCharactersFiltered = state.allCharacters.filter(flt => flt.gender === action.payload)
+        return {
+          ...state,
+          myFavorites: 
+          action.payload === "allCharacters" 
+          ?[...state.allCharacters]
+          :allCharactersFiltered
+        }
     case RESET:
     case REGISTER_USER:
     case LOGIN_USER:
