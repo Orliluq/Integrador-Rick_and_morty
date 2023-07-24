@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c7b790ba.css",
+    "main.js": "/static/js/main.89c1ec2e.js",
+    "static/media/loading.gif": "/static/media/loading.7ee79092c2e84ea146b4.gif",
+    "static/media/gifreadme.gif": "/static/media/gifreadme.1752cbb42d2a87e7b1b8.gif",
+    "static/media/YzyY.gif": "/static/media/YzyY.f16194fb3c3bc3bddc06.gif",
+    "static/media/RZxQ.gif": "/static/media/RZxQ.72ce054803e2d5f432eb.gif",
+    "static/media/WG8Q.gif": "/static/media/WG8Q.d78bf89a8da978329df1.gif",
+    "static/media/PageError.png": "/static/media/PageError.7b00a42fd2ed38dc637f.png",
+    "static/media/myImagen.jpeg": "/static/media/myImagen.c845c683e6905c9a88ae.jpeg",
+    "static/media/instagram.png": "/static/media/instagram.79535458a8a6d88f81d4.png",
+    "static/media/gorjeo.png": "/static/media/gorjeo.c6e48e60f856cb822273.png",
+    "static/media/github.png": "/static/media/github.a855c3975c028d8069f5.png",
+    "static/media/linkedin.png": "/static/media/linkedin.6892b3ae328c7a1e055f.png",
+    "static/media/lupa.svg": "/static/media/lupa.db288dfc1dddb3fd7d05d3af09a7075f.svg",
+    "index.html": "/index.html",
+    "main.c7b790ba.css.map": "/static/css/main.c7b790ba.css.map",
+    "main.89c1ec2e.js.map": "/static/js/main.89c1ec2e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c7b790ba.css",
+    "static/js/main.89c1ec2e.js"
+  ]
+}
